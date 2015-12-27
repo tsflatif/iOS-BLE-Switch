@@ -12,6 +12,7 @@
 		438D26911C30A50200CA68F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438D268F1C30A50200CA68F8 /* Main.storyboard */; };
 		438D26931C30A50200CA68F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 438D26921C30A50200CA68F8 /* Assets.xcassets */; };
 		438D26961C30A50200CA68F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438D26941C30A50200CA68F8 /* LaunchScreen.storyboard */; };
+		438D269E1C30A5A100CA68F8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 438D269D1C30A5A100CA68F8 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		438D26921C30A50200CA68F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		438D26951C30A50200CA68F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		438D26971C30A50200CA68F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438D269D1C30A5A100CA68F8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438D269E1C30A5A100CA68F8 /* CoreBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		438D267F1C30A50200CA68F8 = {
 			isa = PBXGroup;
 			children = (
+				438D269D1C30A5A100CA68F8 /* CoreBluetooth.framework */,
 				438D268A1C30A50200CA68F8 /* BLE Switch */,
 				438D26891C30A50200CA68F8 /* Products */,
 			);
