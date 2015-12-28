@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  BLE Switch
 //
-//  Created by Tauseef Latif on 2015-12-27.
+//  Created by Tauseef Latif on 2015-10-27.
 //  Copyright © 2015 Tauseef Latif. All rights reserved.
 //
 
@@ -43,7 +43,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         // Do any additional setup after loading the view, typically from a nib.
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -54,7 +53,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "scanForBLEDevice", userInfo: nil, repeats: false)
         
         activityIndicator.startAnimating()
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -82,7 +80,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         centralManager.stopScan()
         
         centralManager.connectPeripheral(connectPeripheral, options: nil)
-        
     }
     
     func peripheral(peripheral: CBPeripheral, didDiscoverServices error: NSError?) {
@@ -97,7 +94,6 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             if service.UUID == CBUUID(string: BLUE_HOME_SERVICE){
                 //Discover characteristics for our service
                 peripheral.discoverCharacteristics(nil, forService: aService)
-                
             }
         }
     }
@@ -122,14 +118,11 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
         connectPeripheral.delegate = self
         
         connectPeripheral.discoverServices(nil)
-        
     }
     
     func writeBLEData(string: String){
         let data = string.dataUsingEncoding(NSUTF8StringEncoding)
         connectPeripheral.writeValue(data!, forCharacteristic: writeCharacteristic, type: CBCharacteristicWriteType.WithResponse)
-        
-        
     }
     
     func hideActivityIndicator() {
@@ -169,7 +162,4 @@ class ViewController: UIViewController, CBCentralManagerDelegate, CBPeripheralDe
             break
         }
     }
-    
-    
 }
-
